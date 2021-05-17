@@ -1,0 +1,2 @@
+com/indianstatecensusanalyzer/StateCensusAnalyzer.java
+ com.indianstatecensusanalyzer.StateCensusAnalyzer
