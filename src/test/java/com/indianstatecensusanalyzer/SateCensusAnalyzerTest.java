@@ -64,6 +64,7 @@ public class SateCensusAnalyzerTest {
     }
 
     private static final String STATE_CODE_CSV_FILE_PATH = "E:\\Ebook\\BridgeLabz\\Assignment\\Indian States Census Analyzer\\StateCodeCSV.csv";
+    private static final String WRONG_STATE_CODE_CSV_FILE_PATH = "E:\\Ebook\\BridgeLabz\\Assignment\\Indian States Census Analyzer\\src\\StateCodeCSV.csv";
 
     @Test
     public void givenStateCodeCSVFile_ShouldReturnNumberOfRecords() {
@@ -73,6 +74,16 @@ public class SateCensusAnalyzerTest {
             Assertions.assertEquals(7, noOfEntries);
         } catch (Exception e) {
             e.printStackTrace();
+        }
+    }
+
+    @Test
+    public void givenStateCodeCSVFile_WhenPathIncorrect_ShouldThrowException() {
+        try {
+            StateCensusAnalyzer censusAnalyzer = new StateCensusAnalyzer(Paths.get(WRONG_STATE_CODE_CSV_FILE_PATH));
+            censusAnalyzer.readStateCodeCSVData();
+        } catch (StateCensusAnalyzerException e) {
+            Assertions.assertEquals(StateCensusAnalyzerException.ExceptionType.INCORRECT_PATH, e.type);
         }
     }
 
