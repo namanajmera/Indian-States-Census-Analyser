@@ -65,6 +65,7 @@ public class SateCensusAnalyzerTest {
 
     private static final String STATE_CODE_CSV_FILE_PATH = "E:\\Ebook\\BridgeLabz\\Assignment\\Indian States Census Analyzer\\StateCodeCSV.csv";
     private static final String WRONG_STATE_CODE_CSV_FILE_PATH = "E:\\Ebook\\BridgeLabz\\Assignment\\Indian States Census Analyzer\\src\\StateCodeCSV.csv";
+    private static final String STATE_CODE_CSV_FILE_WRONG_DELIMITER_PATH = "E:\\Ebook\\BridgeLabz\\Assignment\\Indian States Census Analyzer\\StateCodeCSVInvalidDelimiter.csv";
 
     @Test
     public void givenStateCodeCSVFile_ShouldReturnNumberOfRecords() {
@@ -94,6 +95,17 @@ public class SateCensusAnalyzerTest {
             censusAnalyzer.readStateCodeCSVData();
         } catch (StateCensusAnalyzerException e) {
             Assertions.assertEquals(StateCensusAnalyzerException.ExceptionType.INCORRECT_STATE, e.type);
+        }
+    }
+
+    @Test
+    public void givenStateCodeCSVFile_WhenIncorrectDelimeter_ShouldThrowException() {
+        try {
+            StateCensusAnalyzer censusAnalyzer = new StateCensusAnalyzer(
+                    Paths.get(STATE_CODE_CSV_FILE_WRONG_DELIMITER_PATH));
+            censusAnalyzer.readStateCodeCSVData();
+        } catch (StateCensusAnalyzerException e) {
+            Assertions.assertEquals(StateCensusAnalyzerException.ExceptionType.INCORRECT_DELIMITER, e.type);
         }
     }
 
