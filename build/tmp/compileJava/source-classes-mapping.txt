@@ -1,7 +1,7 @@
-com/indianstatecensusanalyzer/StateCensusCSV.java
- com.indianstatecensusanalyzer.StateCensusCSV
 com/indianstatecensusanalyzer/StateCensusAnalyzerException.java
  com.indianstatecensusanalyzer.StateCensusAnalyzerException
  com.indianstatecensusanalyzer.StateCensusAnalyzerException$ExceptionType
 com/indianstatecensusanalyzer/StateCensusAnalyzer.java
  com.indianstatecensusanalyzer.StateCensusAnalyzer
+com/indianstatecensusanalyzer/StateCensusCSV.java
+ com.indianstatecensusanalyzer.StateCensusCSV
