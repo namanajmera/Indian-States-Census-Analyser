@@ -62,4 +62,18 @@ public class SateCensusAnalyzerTest {
             Assertions.assertEquals(StateCensusAnalyzerException.ExceptionType.INCORRECT_CSV_HEADER, e.type);
         }
     }
+
+    private static final String STATE_CODE_CSV_FILE_PATH = "E:\\Ebook\\BridgeLabz\\Assignment\\Indian States Census Analyzer\\StateCodeCSV.csv";
+
+    @Test
+    public void givenStateCodeCSVFile_ShouldReturnNumberOfRecords() {
+        try {
+            StateCensusAnalyzer censusAnalyzer = new StateCensusAnalyzer(Paths.get(STATE_CODE_CSV_FILE_PATH));
+            int noOfEntries = censusAnalyzer.readStateCodeCSVData();
+            Assertions.assertEquals(7, noOfEntries);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
 }
