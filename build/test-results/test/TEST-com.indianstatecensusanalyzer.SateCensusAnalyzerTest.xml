@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.indianstatecensusanalyzer.SateCensusAnalyzerTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-05-17T03:29:56" hostname="HACKERNAMAN" time="0.079">
+<testsuite name="com.indianstatecensusanalyzer.SateCensusAnalyzerTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2021-05-17T03:31:50" hostname="HACKERNAMAN" time="0.174">
   <properties/>
-  <testcase name="givenStateCensusCSVFile_WhenIncorrectDelimeter_ShouldThrowException()" classname="com.indianstatecensusanalyzer.SateCensusAnalyzerTest" time="0.079"/>
+  <testcase name="givenStateCensusCSVFile_WhenIncorrectCSVHeader_ShouldThrowException()" classname="com.indianstatecensusanalyzer.SateCensusAnalyzerTest" time="0.136"/>
+  <testcase name="givenStateCensusCSVFile_ShouldReturnNumberOfRecords()" classname="com.indianstatecensusanalyzer.SateCensusAnalyzerTest" time="0.015"/>
+  <testcase name="givenStateCensusCSVFile_WhenStateIncorrect_ShouldThrowException()" classname="com.indianstatecensusanalyzer.SateCensusAnalyzerTest" time="0.014"/>
+  <testcase name="givenStateCensusCSVFile_WhenIncorrectDelimeter_ShouldThrowException()" classname="com.indianstatecensusanalyzer.SateCensusAnalyzerTest" time="0.003"/>
+  <testcase name="givenStateCensusCSVFile_WhenPathIncorrect_ShouldThrowException()" classname="com.indianstatecensusanalyzer.SateCensusAnalyzerTest" time="0.002"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
