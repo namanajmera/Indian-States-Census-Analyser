@@ -31,4 +31,14 @@ public class SateCensusAnalyzerTest {
             Assertions.assertEquals(StateCensusAnalyzerException.ExceptionType.INCORRECT_PATH, e.type);
         }
     }
+
+    @Test
+    public void givenStateCensusCSVFile_WhenStateIncorrect_ShouldThrowException() {
+        try{
+            StateCensusAnalyzer censusAnalyzer = new StateCensusAnalyzer(Paths.get(STATE_CENSUS_CSV_FILE_PATH));
+            censusAnalyzer.readStateCensusCSVData();
+        }catch(StateCensusAnalyzerException e) {
+            Assertions.assertEquals(StateCensusAnalyzerException.ExceptionType.INCORRECT_STATE, e.type);
+        }
+    }
 }
