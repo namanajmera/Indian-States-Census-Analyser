@@ -9,6 +9,7 @@ import java.nio.file.Paths;
 public class SateCensusAnalyzerTest {
     private static final String STATE_CENSUS_CSV_FILE_PATH = "E:\\Ebook\\BridgeLabz\\Assignment\\Indian States Census Analyzer\\StateCensusCSV.csv";
     private static final String WRONG_CSV_FILE_PATH="E:\\Ebook\\BridgeLabz\\Assignment\\Indian States Census Analyzer\\src\\StateCensusCSV.csv";
+    private static final String CSV_FILE_WRONG_DELIMITER_PATH = "E:\\Ebook\\BridgeLabz\\Assignment\\Indian States Census Analyzer\\StateCensusCSVInvalidDelimiter.csv";
 
 
     @Test
@@ -39,6 +40,16 @@ public class SateCensusAnalyzerTest {
             censusAnalyzer.readStateCensusCSVData();
         }catch(StateCensusAnalyzerException e) {
             Assertions.assertEquals(StateCensusAnalyzerException.ExceptionType.INCORRECT_STATE, e.type);
+        }
+    }
+
+    @Test
+    public void givenStateCensusCSVFile_WhenIncorrectDelimeter_ShouldThrowException() {
+        try{
+            StateCensusAnalyzer censusAnalyzer = new StateCensusAnalyzer(Paths.get(CSV_FILE_WRONG_DELIMITER_PATH));
+            censusAnalyzer.readStateCensusCSVData();
+        }catch(StateCensusAnalyzerException e) {
+            Assertions.assertEquals(StateCensusAnalyzerException.ExceptionType.INCORRECT_DELIMITER, e.type);
         }
     }
 }
