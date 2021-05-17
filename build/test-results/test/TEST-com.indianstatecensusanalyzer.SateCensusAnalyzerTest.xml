@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.indianstatecensusanalyzer.SateCensusAnalyzerTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-05-17T03:40:49" hostname="HACKERNAMAN" time="0.038">
+<testsuite name="com.indianstatecensusanalyzer.SateCensusAnalyzerTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-05-17T03:41:45" hostname="HACKERNAMAN" time="0.134">
   <properties/>
-  <testcase name="givenStateCodeCSVFile_WhenPathIncorrect_ShouldThrowException()" classname="com.indianstatecensusanalyzer.SateCensusAnalyzerTest" time="0.038"/>
+  <testcase name="givenStateCodeCSVFile_WhenStateIncorrect_ShouldThrowException()" classname="com.indianstatecensusanalyzer.SateCensusAnalyzerTest" time="0.134"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
